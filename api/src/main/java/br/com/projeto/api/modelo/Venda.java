@@ -25,7 +25,7 @@ public class Venda extends PeonEntity {
     private double valorTotal;
 
     @ManyToOne
-    @JoinColumn(name = "cliente_id", nullable = false)
+    @JoinColumn(name = "cliente_id", referencedColumnName = "uuid", nullable = false, columnDefinition = "BINARY(16)")
     private Cliente cliente;
 
     @OneToMany(mappedBy = "venda")

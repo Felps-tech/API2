@@ -34,7 +34,7 @@ public class ClienteController {
             .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping("/novo")
+    @PostMapping
     public Cliente salvarCliente(@RequestBody Cliente cliente) {
         return clienteService.salvarCliente(cliente);
     }
